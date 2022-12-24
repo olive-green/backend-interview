@@ -10,7 +10,6 @@
 ## Setup
 - clone the repo
 - create .env file and paste all constants from dotenv-example file
-- start mongodb server.
 - run "npm i" to install packages
 - run "npm start" to start server
 - run "npm test" to run test cases
