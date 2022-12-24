@@ -2,9 +2,10 @@
 
 ## General Info
 
-language used: NodeJs
-framework used: Express
-database: MongoDb 
+1. language used: JS
+2. Runtime: NodeJs
+2. framework used: Express
+3. database: MongoDb 
 
 ## Setup
 - clone the repo
@@ -45,37 +46,44 @@ server: localhost:3000
 4. To Delete the Order with : http://localhost:3000/order/delete/:id
     
 5. To Get the Order with id : http://localhost:3000/order/:id
+
+## Postman example
+- http://localhost:5000/order/create
+```json
+{
+    "id": "5",
+    "totalfee": "200",
+    "services": [
+        {
+            "id": "12"
+        }
+    ]
+}
+```
 ## Scripts
 start: npm start
 test: npm test
 
 ## Structure
 
+```json
 service: {
-	serviceId: int,
-	serviceName: string
+	id: int,
+	name: string
 }
-
+```
+```json
 order: {
-	orderId: int,
-        orderTime: timestamp,
-        billAmount: int,
+	id: int,
+        datetime: timestamp,
+        totalfee: int,
         services: [
         	{
                     id: int (linked to service)
                 }
         ]
 }
-
-## Changes for production
-- Add security
-- Better logging implementation
-- More test cases
-- Db indexing
-- use .env file for server and DB constants
+```
 
 
 
-
-
-5
